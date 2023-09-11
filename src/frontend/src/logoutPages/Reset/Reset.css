@@ -1,0 +1,68 @@
+
+.linkRight {
+  text-transform: none;
+  float: left;
+  font-size: 90%;
+  padding-top: 1vh;
+  text-align: right;
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #007fff;
+}
+a:active {
+  text-decoration: underline;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+.reset__container {
+  flex-direction: column;
+  margin-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.reset__textBox {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 18px;
+  width: 90%;
+}
+.reset__btn {
+  width: auto;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #49b6ff;
+  font-weight: bolder;
+  font-size: 130%;
+}
+
+.reset__btn:hover {
+  background-color: #007fff;
+  cursor: pointer;
+}

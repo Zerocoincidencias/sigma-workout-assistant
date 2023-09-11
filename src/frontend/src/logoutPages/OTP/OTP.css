@@ -1,0 +1,148 @@
+.body2 {
+  font-family: Sans-serif;
+  background: linear-gradient(
+    90deg,
+    #49b6ff 0%,
+    #007fff 50%,
+    rgba(26, 45, 61, 1) 100%
+  );
+  width: 100vw; 
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.otp-big {
+  color: #ffffff;
+  font-size: 350%;
+  font-weight: 50;
+  outline: none;
+}
+
+.otp-small {
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  margin-top: 3rem;
+  margin-bottom: 30px;
+  font-size: 200%;
+  font-weight: 50;
+  outline: none;
+}
+
+.linkRight {
+  text-transform: none;
+  float: left;
+  font-size: 90%;
+  padding-top: 1vh;
+  text-align: right;
+  width: 90%;
+}
+
+.otp__container {
+  flex-direction: column;
+  text-align: center;
+  padding-top: 20vh;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  text-align: center;
+}
+.otp__textBox {
+  border-radius: 25px;
+  border: 1px solid rgb(20, 14, 202);
+  padding: 0.5rem;
+  font-size: 40px;
+  width: 90%;
+  text-align: center;
+  outline: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .otp__container {
+    padding-top: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .otp-big {
+    font-size: 250%;
+  }
+  
+  .otp-small {
+    font-size: 130%;
+  }
+  .otp__textBox {
+    border-radius: 25px;
+    border: 1px solid rgb(20, 14, 202);
+    font-size: 30px;
+    width: 80%;
+    padding: 0.5rem;
+  }
+}
+
+#otp-error-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+#otp-error {
+  margin-top: 0;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #bd0505;
+  border: 1px solid #ffffff00;
+  background-color: hsla(0, 0%, 100%, 0);
+  opacity: 1;
+}
+
+.iconleftarrow {
+  color: rgb(255, 255, 255);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+  height: 3em;
+  width: 3em;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.iconleftarrow:hover {
+  cursor: pointer;
+}
+
+.otp-exit{
+  position: absolute;
+  bottom: 0;
+  padding-left: 2rem;
+  margin-bottom: 15vh;
+}
+
+@media only screen and (max-width: 425px) {
+  .otp-exit{
+    position: relative;
+    padding-left: 2rem;
+    padding-top: 4rem;
+  }
+}
+
+.otp__btn {
+  width: auto;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 15px 2rem;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: white;
+  background-color: #49b6ff;
+  font-weight: bolder;
+  font-size: 130%;
+}
+
+.otp__btn:hover {
+  background-color: #007fff;
+  cursor: pointer;
+}

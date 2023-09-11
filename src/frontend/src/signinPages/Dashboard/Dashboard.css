@@ -1,0 +1,11 @@
+body {
+  background-color: aliceblue;
+  align-items: center;
+  position: relative;
+  margin: 0px;
+  height: 100%;
+}
+
+.margin {
+  padding: 5em 1.5em 1.5em 1.5em;
+}
