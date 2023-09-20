@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
   auth,
-  //registerUserWithEmailAndPassword,
+  registerUserWithEmailAndPassword,
   getCreatedUsers,
-  //deleteUser,
+  deleteUser,
 } from "../../firebase";
 import "./Funcionarios.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-//import { NotificationManager } from "react-notifications";
+import { NotificationManager } from "react-notifications";
 
 function Funcionarios() {
   const [email, setEmail] = useState("");
@@ -23,13 +23,13 @@ function Funcionarios() {
   const navigate = useNavigate();
 
   const handleKeyDownPassConfirm = (event) => {
-/*     if (event.key === "Enter") {
+    if (event.key === "Enter") {
       register(); //run register function with enter button press
-    } */
+    } 
   };
 
   const handleKeyDownEnterNext = (event, paramid) => {
-/*     if (event.key === "Enter") {
+    if (event.key === "Enter") {
        //when enter is pressed, selects next element depending on the hardcoded id passed in paramid
 
       if (paramid === "fullnameregister") {
@@ -39,11 +39,11 @@ function Funcionarios() {
       } else if (paramid === "passregister") {
         document.getElementById("passconfirmregister").focus();
       }
-    } */
+    } 
   };
 
   const register = () => {
-/*     const registerErrorName = document.getElementById("login-error-name");
+    const registerErrorName = document.getElementById("login-error-name");
     const registerErrorPasswordConf = document.getElementById(
       "login-error-password-confirm"
     );
@@ -70,11 +70,11 @@ function Funcionarios() {
         password
         );
       NotificationManager.success("Utilizador adicionado com sucesso!");
-      } */
+      } 
   };
 
   const handleDeleteUser = async (uid) => {
-/*     try {
+    try {
       await deleteUser(uid);
       // User deleted successfully
       NotificationManager.success("Utilizador apagado com sucesso!");
@@ -82,7 +82,7 @@ function Funcionarios() {
       // An error occurred while deleting the user
       NotificationManager.error("Erro ao apagar Utilizador!");
       console.error(error);
-    } */
+    } 
   };
 
   useEffect(() => {

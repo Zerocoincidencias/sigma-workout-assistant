@@ -65,7 +65,7 @@ const Sidebar = ({ParentPage,children}) => {
         <li className={`sidebar2-item ${hoverIcon === "Clientes" ? 'sidebar2-linkAtualPage' : ''}`}>
             <a href="#top" className="sidebar2-link" onClick={goClientes}>
                 <MdGroups size={40}/>
-                <span className="link-text">Clientes</span>
+                <span className="link-text">USERS</span>
             </a>
         </li>
     }
@@ -75,7 +75,7 @@ const Sidebar = ({ParentPage,children}) => {
         <li className={`sidebar2-item ${hoverIcon === "Funcionários" ? 'sidebar2-linkAtualPage' : ''}`}>
             <a href="#top" className="sidebar2-link" onClick={goSignupUser}>
                 <MdGroupAdd size={40}/>
-                <span className="link-text">Funcionários</span>
+                <span className="link-text">Exercícios</span>
             </a>
         </li>
     }
@@ -94,14 +94,14 @@ const Sidebar = ({ParentPage,children}) => {
                     <li className={`sidebar2-item ${hoverIcon === "Dashboard" ? 'sidebar2-linkAtualPage' : ''}`}>
                         <a href="#top" className="sidebar2-link" onClick={goDash}>
                             <MdOutlineAreaChart size={40}/> 
-                            <span className="link-text">Dasboards</span>
+                            <span className="link-text">Info & Stats</span>
                         </a>
                     </li>
 
                     <li className={`sidebar2-item ${hoverIcon === "Conta" ? 'sidebar2-linkAtualPage' : ''}`}>
                         <a href="#top" className="sidebar2-link" onClick={goConta}>
                             <MdManageAccounts size={40}/> 
-                            <span className="link-text">Conta</span>
+                            <span className="link-text">EU</span>
                         </a>
                     </li>
 

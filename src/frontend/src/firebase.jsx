@@ -29,28 +29,6 @@ import {
 
 import { getFunctions, httpsCallable } from "firebase/functions"
 
-/* const firebaseConfig = {
-  apiKey: "AIzaSyCUzacBlgFrmk0c4PCGpo8xiyMb_oklgvU",
-  authDomain: "esi4-dev.firebaseapp.com",
-  databaseURL:
-    "https://esi4-dev-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "esi4-dev",
-  storageBucket: "esi4-dev.appspot.com",
-  messagingSenderId: "361717233210",
-  appId: "1:361717233210:web:49b0b4eb97e7228dd72703",
-  measurementId: "G-VZB2KVSE3C",
-}; */
-
-/*const firebaseConfig = {
-  apiKey: "AIzaSyAAPnGW1C9ZVjpxntmQ3MrUXj1QD5U8TGU",
-  authDomain: "factory-pulse-emaf.firebaseapp.com",
-  databaseURL: "https://factory-pulse-emaf-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "factory-pulse-emaf",
-  storageBucket: "factory-pulse-emaf.appspot.com",
-  messagingSenderId: "407935821751",
-  appId: "1:407935821751:web:2c0b682688557382cb6a32",
-  measurementId: "G-LR0K10F6YK"
-};*/
 
 const firebaseConfig = {
   apiKey: "AIzaSyAW1BWonDNfc-aRwaVIqwQ86gCaAjK94SA",

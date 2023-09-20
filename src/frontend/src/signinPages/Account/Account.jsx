@@ -5,15 +5,15 @@ import "./Account.css";
 import { auth } from "../../firebase";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
-import { AccountValues/* , updateRegistry */ } from "../../firebase";
+import { AccountValues , updateRegistry } from "../../firebase";
 import logo from "./assets/images/Esi-azul.svg";
-//import { NotificationManager } from "react-notifications";
+import { NotificationManager } from "react-notifications";
 
 function Account() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
-  const [isEditable, /* setIsEditable */] = useState(false);
+  const [isEditable,  setIsEditable ] = useState(false);
 
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -33,7 +33,7 @@ function Account() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, loading]);
 
-/*   const handleButtonClick = async () => {
+   const handleButtonClick = async () => {
     if (isEditable) {
       const stateUpdate = await updateRegistry(
         auth.currentUser.uid,
@@ -49,7 +49,7 @@ function Account() {
         NotificationManager.error("Erro ao atualizar dados!");
     }
     setIsEditable(!isEditable);
-  }; */
+  };
 
   return (
     <Sidebar ParentPage="Conta">
@@ -179,7 +179,7 @@ function Account() {
             <button
               className="conta-editarBtn"
               style={{ background: isEditable ? "#007fff" : "#49b6ff" }}
-              /* onClick={handleButtonClick} */
+               onClick={handleButtonClick}
             >
               {isEditable ? "Submeter" : "Editar campos"}
             </button>
