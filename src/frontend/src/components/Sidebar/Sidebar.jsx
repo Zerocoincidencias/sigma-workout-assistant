@@ -1,7 +1,7 @@
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { checkemail, checklicense, getCurrentUserRole, logout } from "../../firebase";
-import logo from './assets/images/Esi-branco.svg'
+import logo from './assets/images/Sigma Workout Assistant full white.png'
 import { MdLogout, MdOutlineAreaChart, MdManageAccounts, MdGroups, MdGroupAdd, MdOutlineEditCalendar } from "react-icons/md";
 import { useEffect, useState } from "react";
 
@@ -10,9 +10,7 @@ const Sidebar = ({ParentPage,children}) => {
     const hoverIcon = ParentPage;
     console.log( hoverIcon)
     const [SeeAllUsers , SetSeeAllUsers] = useState(false);
-    const [AddUserStandard, SetAddUserStandard] = useState(false);
     let SeeAllUsersComponent = null;
-    let AddUserStandardComponent = null;
 
     useEffect(() =>{
         checkemail().then((result) => {
@@ -30,10 +28,6 @@ const Sidebar = ({ParentPage,children}) => {
             console.log(role)
             if(role === "admin"){
                 SetSeeAllUsers(true);
-                SetAddUserStandard(true);
-            }
-            else if(role === "leader") {
-                SetAddUserStandard(true);
             }
         });
     
@@ -54,10 +48,13 @@ const Sidebar = ({ParentPage,children}) => {
         navigate("/users");
     }
     const goSignupUser = () =>{  
-        navigate("/funcionarios");
+        navigate("/exercises");
     }
     const goAgenda = () => {
         navigate("/agenda");
+    }
+    const goWorkouts = () => {
+        navigate("/workouts")
     }
     
     if (SeeAllUsers) {
@@ -70,15 +67,6 @@ const Sidebar = ({ParentPage,children}) => {
         </li>
     }
    
-    if (AddUserStandard) {
-        AddUserStandardComponent =                     
-        <li className={`sidebar2-item ${hoverIcon === "Funcionários" ? 'sidebar2-linkAtualPage' : ''}`}>
-            <a href="#top" className="sidebar2-link" onClick={goSignupUser}>
-                <MdGroupAdd size={40}/>
-                <span className="link-text">Exercícios</span>
-            </a>
-        </li>
-    }
 
     return(
         <div>
@@ -94,27 +82,40 @@ const Sidebar = ({ParentPage,children}) => {
                     <li className={`sidebar2-item ${hoverIcon === "Dashboard" ? 'sidebar2-linkAtualPage' : ''}`}>
                         <a href="#top" className="sidebar2-link" onClick={goDash}>
                             <MdOutlineAreaChart size={40}/> 
-                            <span className="link-text">Info & Stats</span>
+                            <span className="link-text">FREE MEASURING</span>
+                        </a>
+                    </li>
+
+
+                     <li className={`sidebar2-item ${hoverIcon === "Funcionários" ? 'sidebar2-linkAtualPage' : ''}`}>
+                        <a href="#top" className="sidebar2-link" onClick={goSignupUser}>
+                            <MdGroupAdd size={40}/>
+                        <span className="link-text">EXERCISES</span>
+                        </a>
+                     </li>
+
+                     <li className={`sidebar2-item ${hoverIcon === "Funcionários" ? 'sidebar2-linkAtualPage' : ''}`}>
+                        <a href="#top" className="sidebar2-link" onClick={goWorkouts}>
+                            <MdGroupAdd size={40}/>
+                        <span className="link-text">WORKOUTS</span>
+                        </a>
+                     </li>
+
+                     <li className={`sidebar2-item ${hoverIcon === "Agenda" ? 'sidebar2-linkAtualPage' : ''}`}>
+                        <a href="#top" className="sidebar2-link" onClick={goAgenda}>
+                            <MdOutlineEditCalendar size={40}/>
+                            <span className="link-text">SCHEDULE</span>
                         </a>
                     </li>
 
                     <li className={`sidebar2-item ${hoverIcon === "Conta" ? 'sidebar2-linkAtualPage' : ''}`}>
                         <a href="#top" className="sidebar2-link" onClick={goConta}>
                             <MdManageAccounts size={40}/> 
-                            <span className="link-text">EU</span>
+                            <span className="link-text">ME</span>
                         </a>
                     </li>
 
-                    <li className={`sidebar2-item ${hoverIcon === "Agenda" ? 'sidebar2-linkAtualPage' : ''}`}>
-                        <a href="#top" className="sidebar2-link" onClick={goAgenda}>
-                            <MdOutlineEditCalendar size={40}/>
-                            <span className="link-text">Agenda</span>
-                        </a>
-                    </li>
-
-                    {SeeAllUsersComponent}
-                    
-                    {AddUserStandardComponent}
+                     {SeeAllUsersComponent}
 
                     <li className="sidebar2-item">
                         <a href="#top" className="sidebar2-link" onClick={logout}>

@@ -81,6 +81,15 @@ const Navbar = ({CurrentPage, children}) => {
             window.location.href = "/dashboard";
         }
     }
+    /*if(NameActualPage === "Patient"){
+        if(location.state){
+            BreadcrumbsCheck = 3
+            NomeCelula = location.state.Celula;
+            NomeMaquina = location.state.Maquina;
+        } else {
+            window.location.href = "/dashboard";
+        }
+    }*/
 
 
     useEffect(() => {
@@ -154,7 +163,7 @@ const Navbar = ({CurrentPage, children}) => {
     
     
     const handleSearch = search => {
-        if (search === 'OTP' || search === 'login' || search ==='signup' || search ==='reset' || search ==='dashboard' ||search === 'account' ||search === 'home' ||search === 'agenda' || search ==='users' || search ==='funcionarios' ||search === 'definicoes' ) {
+        if (search === 'OTP' || search === 'login' || search ==='signup' || search ==='reset' || search ==='dashboard' ||search === 'account' ||search === 'home' ||search === 'agenda' || search ==='users' || search ==='exercises' ||search === 'definicoes' ) {
           navigate('../'+search); //run search function with enter button press
         }
         else if (!search && !search.value){

@@ -19,9 +19,9 @@ function Agenda() {
 
   return (
     <Sidebar ParentPage="Agenda">
-      <Navbar CurrentPage="Agenda">
+      {/*<Navbar CurrentPage="Agenda">*/}
         <Calendario />
-      </Navbar>
+      {/*</Navbar>*/}
     </Sidebar>
   );
 }

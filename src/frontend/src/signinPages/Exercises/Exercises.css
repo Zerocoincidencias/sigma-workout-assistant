@@ -1,0 +1,199 @@
+
+
+.linkRight {
+  text-transform: none;
+  float: left;
+  font-size: 90%;
+  padding-top: 1vh;
+  text-align: right;
+  width: 90%;
+}
+
+/* a {
+  text-decoration: none;
+  color: black;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #007fff;
+}
+a:active {
+  text-decoration: underline;
+} */
+
+.sigmabackground{
+  color: black;
+}
+
+.exercises-add-exercise-box{
+  background-color: rgb(50, 50, 50);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.adicionar-exercicio-box2{
+  background-color: rgb(50, 50, 50);
+  border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.func-row{  
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.func-inputName{
+  width: 48%;
+}
+
+.func-titulo{
+  font-size: 2rem;
+  color: var(--Esi-Claro);
+  margin-bottom: 1rem;
+}
+.register__container2 {
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.sigmatextBox {  
+  border: 0px;
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  width: 90%;
+  color:#ffffff;
+  background-color: rgb(50, 50, 50);
+}
+.sigmabtn {
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(50, 50, 50);
+  font-weight: bolder;
+  font-size: 100%;
+  border-radius: 0%;
+  
+}
+
+.sigmabtn:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color:#ffffff;
+}
+
+
+.func-subTitulo{
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.func-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: thin solid var(--Esi-Principal);
+}
+
+.func-table th{
+  color: white;
+  background-color: var(--Esi-Principal);
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem ;
+}
+.func-table td{
+    text-align: center;
+    padding: 8px;
+  }
+
+  .func-table tr:nth-child(even) {
+    background-color:aliceblue;
+  }
+
+.func-apagar{
+  border: none;
+  color: white;
+  background-color: var(--Esi-Claro);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 15px;
+}
+
+.func-apagar:hover{
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 425px) {
+  .adicionar-utilizador-box {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .adicionar-utilizador-box2{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+    overflow-x: scroll;
+  }
+
+  .func-titulo{
+    font-size: 1.3rem;
+  }
+
+  .func-row{  
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 0rem;
+  }
+  
+  .func-inputName{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .func-subTitulo{
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: black;
+  }
+
+  .func-table th{
+    font-size: 1rem;
+    padding: 0.5rem 0rem 0.5rem 0rem ;
+  }
+
+  .func-table td{
+    font-size: 0.8rem;
+  }
+
+  .func-apagar{
+    padding: 0.5rem;
+    border-radius: 15px;
+  }
+
+}

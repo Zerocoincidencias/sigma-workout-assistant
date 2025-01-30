@@ -457,6 +457,21 @@ function AccountValues(callback) {
   });
 }
 
+function PatientValues(uid,callback) {
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      const dbRef = ref(getDatabase());
+      const userRef = child(dbRef, "users/" + uid);
+      onValue(userRef, (snapshot) => {
+        if (snapshot.exists()) {
+          const user = snapshot.val();
+          callback(user);
+        }
+      });
+    }
+  });
+}
+
 function getCurrentUserRole(callback) {
   auth.onAuthStateChanged((user) => {
     if (user) {
@@ -632,6 +647,89 @@ const checkemail = async () => {
   }
 };
 
+const registerNewExercise = async (name, description, targetarea) => {
+  const user = auth.currentUser;
+  const db = getDatabase();
+
+  try {
+    await set(ref(db, "users/" + user.uid + "/exercises/" + name), {
+      name: name,
+      description: description,
+      targetarea: targetarea,  
+    });
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+const updateExercise = async (name, description, targetarea) => {
+  const user = auth.currentUser;
+  const db = getDatabase();
+
+  try {
+    await set(ref(db, "users/" + user.uid + "/exercises/" + name), {
+      name: name,
+      description: description,
+      targetarea: targetarea,  
+    });
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+function getExercises() {
+  const user = auth.currentUser;
+
+  return new Promise((resolve) => {
+    const db = getDatabase();
+    const leaderRef = ref(db, "users/" + user.uid + "/exercises");
+    onValue(leaderRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const exercises = Object.values(data);
+        resolve(exercises);
+      } else {
+        resolve([]);
+      }
+    });
+  });
+}
+
+function ExerciseValues(uid,name,callback) {
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      const dbRef = ref(getDatabase());
+      const userRef = child(dbRef, "users/" + uid + "/exercises/"+name);
+      onValue(userRef, (snapshot) => {
+        if (snapshot.exists()) {
+          const user = snapshot.val();
+          callback(user);
+        }
+      });
+    }
+  });
+}
+
+const registerNewWorkoutPlan = async (name, Exercises) => {
+  const user = auth.currentUser;
+  const db = getDatabase();
+
+  console.log(Exercises);
+
+  try {
+    await set(ref(db, "users/" + user.uid + "/workout plans/" + name), {
+      name: name,
+      Exercises:Exercises
+    });
+    
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 export {
   auth,
   logInWithEmailAndPassword,
@@ -647,6 +745,7 @@ export {
   getUserRole,
   getCurrentUserID,
   AccountValues,
+  PatientValues,
   getCurrentUserRole,
   getCurrentUserName,
   registerDetails,
@@ -656,5 +755,10 @@ export {
   deleteUser,
   updateRegistry,
   verifyemail,
-  checkemail
+  checkemail,
+  registerNewExercise,
+  getExercises,
+  updateExercise,
+  ExerciseValues,
+  registerNewWorkoutPlan
 };

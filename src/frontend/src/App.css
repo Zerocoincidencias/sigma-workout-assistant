@@ -8,8 +8,8 @@ app {
 
 
 ::-webkit-scrollbar{
-  width: 10px;
-  background-color: aliceblue;
+  width: 20px;
+  background-color: rgb(255, 255, 255);
 }
 ::-webkit-scrollbar-thumb{
   background-image: -webkit-gradient(linear,

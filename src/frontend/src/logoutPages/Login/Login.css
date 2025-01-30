@@ -3,7 +3,7 @@ body {
 }
 
 .titulo_grande{
-  color: #49b6ff;
+  color: #ffffff;
   font-size: 3.5rem;
   font-weight: 50;
   user-select: none;
@@ -52,7 +52,7 @@ a:active {
 }
 
 .left {
-  background-color: white;
+  background-color: rgb(50, 50, 50);
   width: 50%;
   overflow-y:  scroll;
 }
@@ -135,34 +135,40 @@ a:active {
   padding-bottom: 5vw;
 }
 .login__textBox {
-  border-radius: 25px;
-  border: 1px solid black;
-  padding: 15px;
+  border: 0px;
+  padding: 2px;
+  border-bottom: 1px solid #000;
   font-size: 18px;
   width: 90%;
+  color:#ffffff;
+  background-color: rgb(50, 50, 50);
 }
 
 .login__btn {
   width: auto;
-  border-radius: 25px;
   border: 1px solid black;
-  padding: 15px;
+  padding: 10px;
   font-size: 18px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color: white;
-  background-color: rgb(74, 183, 255);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(50, 50, 50);
   font-weight: bolder;
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .login__btn:hover {
-  background-color: #007fff;
+  background-color: rgb(0, 0, 0);
   cursor: pointer;
+  color:#ffffff;
 }
 
 .logo-principal{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  width: 200px;
 }
 
 .imageContainer{

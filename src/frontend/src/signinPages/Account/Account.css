@@ -3,9 +3,8 @@
   margin-right: 1rem;
 }
 
-.conta-box{
-  background-color: #fff;
-  border-radius: 15px;
+.me-box{
+  background-color: rgb(50, 50, 50);  
   overflow: hidden;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -15,54 +14,32 @@
   margin-bottom: 2rem;
 }
 
-.conta-box-flex{
+.me-box-flex{
   display: flex;
 }
 
-.conta-box-left{
-  width: 50%;
-  margin-left: 5rem;
-  padding-right: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.conta-box-right{
-  width: 50%;
-  padding-left: 2.5rem;
-  padding-right: 5rem;
-  border-left: thin solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.logoEmpresa{
-  height: 12rem;
-}
-
-.conta-nameInput{
+.me-nameInput{
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 
-.conta-subTitulo{
+.me-subTitulo{
   font-size: 2rem;
   padding-left: 1rem;
   margin-bottom: 0.5rem;
   color: var(--Esi-Claro);
 }
 
-.conta-info{
-  border: thin solid black;
-  border-radius: 50px;
-  padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  font-size: 1.2rem;
-  color: rgb(111, 111, 111);
+.me-info{  
+  border: 0px;
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  font-size: 18px;
+  width: 90%;
+  color:#ffffff;
+  background-color: rgb(50, 50, 50);
 }
 
 .btn-center{
@@ -70,137 +47,23 @@
   display: flex;
   justify-content: center;
 }
-.conta-editarBtn{
-  border: thin solid black;
-  background-color: var(--Esi-Claro);
-  color: #fff;
-  font-size: 1.3rem;
-  border-radius: 50px;
-  padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+.me-btn{
+  width: auto;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  background: rgb(50, 50, 50);
+  font-weight: bolder;
+  font-size: 100%;
+}
+
+.me-btn:hover {
+  background-color: rgb(0, 0, 0);
   cursor: pointer;
+  color:#ffffff;
 }
 
 
-@media only screen and (max-width: 425px) {
-  .conta-box{
-    padding: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-
-  .conta-box-flex{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .conta-box-left{
-    width: 100%;
-    margin-left: 0rem;
-    padding-right: 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .conta-box-right{
-    width: 100%;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    border-left: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .logoEmpresa{
-    height: 7rem;
-    margin-bottom: 2rem;
-  }
-
-  .conta-subTitulo{
-    font-size: 1.5rem;
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--Esi-Claro);
-  }
-  
-  .conta-info{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 0.9rem;
-    overflow-wrap: break-word;
-  }
-
-  .conta-nameInput{
-    margin-bottom: 1rem;
-  }
-
-  .btn-center{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-}
-
-
-@media only screen and (min-width: 426px) and (max-width: 1200px){
-  .conta-box{
-    padding: 2rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .conta-box-left{
-    width: 50%;
-    margin-left: 0rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .conta-box-right{
-    width: 50%;
-    padding-left: 1rem;
-    padding-right: 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .logoEmpresa{
-    height: 7rem;
-    margin-bottom: 0rem;
-  }
-
-  .conta-subTitulo{
-    font-size: 1.5rem;
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--Esi-Claro);
-  }
-  
-  .conta-info{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 0.9rem;
-    overflow-wrap: break-word;
-  }
-
-  .conta-nameInput{
-    margin-bottom: 1rem;
-  }
-
-  .btn-center{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-}

@@ -1,0 +1,7 @@
+body {
+    background: linear-gradient( 180deg, #2f2f2f 0%, #000000 50%, rgb(80, 80, 80) 100% );
+    align-items: center;
+    position: relative;
+    margin: 0px;
+    height: 100%;
+  }

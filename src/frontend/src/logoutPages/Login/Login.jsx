@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, logInWithEmailAndPassword } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
-import logo from "../images/FactoryPulse.svg";
+import logo from "../images/Sigma Workout Assistant full white.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -40,7 +40,6 @@ function Login() {
             <img src={logo} alt="Logo" className="logo-principal" />
           </div>
           <div className="login__container">
-            <div className="titulo_grande"> Inicie Sessão </div>
             <div className="titulo_pequeno"> E-MAIL </div>
             <input
               id="email"
@@ -65,17 +64,31 @@ function Login() {
             <div id="login-error-password-holder">
               <p id="login-error-password"></p>
             </div>
-            <div className="linkRight">
-              <Link to="/reset">Esqueceu-se da palavra-passe?</Link>
-            </div>
             <button
               className="login__btn"
               onClick={() => logInWithEmailAndPassword(email, password)}
             >
-              INICIAR SESSÃO
+              LOG ME IN
             </button>
+
+
+            <Link to="/reset">
+            <button
+              className="login__btn"
+            >
+              RESET PASSWORD
+            </button>
+            </Link>
+
+
             <div>
-              Não tem conta? <Link to="/signup">Crie uma agora.</Link>
+            <Link to="/signup">
+            <button
+              className="login__btn"
+            >
+              NEW ACCOUNT
+            </button>
+            </Link>
             </div>
           </div>
         </div>

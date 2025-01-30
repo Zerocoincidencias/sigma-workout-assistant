@@ -1,17 +1,18 @@
 :root {
+    background: linear-gradient( 180deg, #2f2f2f 0%, #000000 50%, rgb(80, 80, 80) 100% );
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #00000080;
     --transition-speed: 600ms;
-    --Esi-Escuro:#1a2d3d;
-    --Esi-Principal:#007fff;
-    --Esi-Claro: #49b6ff;
+    --Esi-Escuro:#222222;
+    --Esi-Principal:#8a8a8a;
+    --Esi-Claro: #000000;
   }
 
 .sidebar2 {
     position: fixed;    
-    background: linear-gradient( 180deg, #49b6ff 0%, #007fff 50%, rgba(26, 45, 61, 1) 100% );
+    background: linear-gradient( 180deg, #2f2f2f 0%, #000000 50%, rgb(80, 80, 80) 100% );
     transition: width 200ms ease;
     z-index: 3;
     
